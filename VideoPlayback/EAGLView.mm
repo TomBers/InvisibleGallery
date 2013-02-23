@@ -256,7 +256,12 @@ namespace {
         if ((intersection.data[0] >= -videoData[i].targetPositiveDimensions.data[0]) && (intersection.data[0] <= videoData[i].targetPositiveDimensions.data[0]) &&
             (intersection.data[1] >= -videoData[i].targetPositiveDimensions.data[1]) && (intersection.data[1] <= videoData[i].targetPositiveDimensions.data[1])) {
             // The tap is only valid if it is inside an active target
-            if (YES == videoData[i].isActive) {
+            
+            if(intersection.data[0] > (videoData[i].targetPositiveDimensions.data[0] / 2) && intersection.data[1] < 0) {
+                NSLog(@"Bottom right quarter");
+                continue;
+            }
+            else if (YES == videoData[i].isActive) {
                 touchInTarget = i;
                 break;
             }

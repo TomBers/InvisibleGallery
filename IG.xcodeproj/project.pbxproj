@@ -93,7 +93,7 @@
 		156617C7153C23F1005018C4 /* icon_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_play.png; sourceTree = "<group>"; };
 		159E01CE1538710D00DA208A /* SampleMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleMath.cpp; sourceTree = "<group>"; };
 		159E01CF1538710D00DA208A /* SampleMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleMath.h; sourceTree = "<group>"; };
-		15B2A9951520A27C00138A7D /* VideoPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = VideoPlay.app; path = IG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B2A9951520A27C00138A7D /* IG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B2A9991520A27C00138A7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		15B2A99B1520A27C00138A7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		15B2A99D1520A27C00138A7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,7 +117,7 @@
 		15B2AA0D1520A84600138A7D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		15B2AA0F1520A85100138A7D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		15B2AA111520A85500138A7D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		15B2AA131520A87700138A7D /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = ../../build/lib/arm/libQCAR.a; sourceTree = SOURCE_ROOT; };
+		15B2AA131520A87700138A7D /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = Vuforia/build/lib/arm/libQCAR.a; sourceTree = SOURCE_ROOT; };
 		15B2AA201520ADA100138A7D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		15B2AA221520ADB500138A7D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		15CE8750164171EE005AE890 /* AR_EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AR_EAGLView.h; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 		15B2A9961520A27C00138A7D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15B2A9951520A27C00138A7D /* VideoPlay.app */,
+				15B2A9951520A27C00138A7D /* IG.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 			);
 			name = IG;
 			productName = VideoPlayback;
-			productReference = 15B2A9951520A27C00138A7D /* VideoPlay.app */;
+			productReference = 15B2A9951520A27C00138A7D /* IG.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -485,10 +485,10 @@
 					"$(CONFIGURATION_FLAGS_DEFINE)",
 				);
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = ../../build/include;
+				HEADER_SEARCH_PATHS = Vuforia/build/include;
 				INFOPLIST_FILE = "VideoPlayback/IG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				LIBRARY_SEARCH_PATHS = Vuforia/build/lib/arm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -512,10 +512,10 @@
 					"$(CONFIGURATION_FLAGS_DEFINE)",
 				);
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = ../../build/include;
+				HEADER_SEARCH_PATHS = Vuforia/build/include;
 				INFOPLIST_FILE = "VideoPlayback/IG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				LIBRARY_SEARCH_PATHS = Vuforia/build/lib/arm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -563,10 +563,10 @@
 					"$(CONFIGURATION_FLAGS_DEFINE)",
 				);
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = ../../build/include;
+				HEADER_SEARCH_PATHS = Vuforia/build/include;
 				INFOPLIST_FILE = "VideoPlayback/IG-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				LIBRARY_SEARCH_PATHS = Vuforia/build/lib/arm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
