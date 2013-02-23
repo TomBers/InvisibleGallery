@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0EEBCCBC16D8FFBC00EE9DA4 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEBCCBB16D8FFBB00EE9DA4 /* info.png */; };
+		0EEBCCBE16D9011300EE9DA4 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0EEBCCBD16D9011300EE9DA4 /* index.html */; };
 		0EF2386E16CDAD2600E3065D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF2386D16CDAD2600E3065D /* CoreLocation.framework */; };
 		0EF2387116CEC3D900E3065D /* cbt.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0EF2387016CEC3D900E3065D /* cbt.dat */; };
 		0EF2387316CEC3E100E3065D /* cbt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0EF2387216CEC3E100E3065D /* cbt.xml */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		0EEBCCBB16D8FFBB00EE9DA4 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		0EEBCCBD16D9011300EE9DA4 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		0EF2386D16CDAD2600E3065D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0EF2387016CEC3D900E3065D /* cbt.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = cbt.dat; sourceTree = "<group>"; };
 		0EF2387216CEC3E100E3065D /* cbt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cbt.xml; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				15CF192D1525FB2D00AFE42F /* VPParentViewController.h */,
 				15CF192E1525FB2D00AFE42F /* VPParentViewController.m */,
 				15B2A9A01520A27C00138A7D /* Supporting Files */,
+				0EEBCCBD16D9011300EE9DA4 /* index.html */,
 			);
 			path = VideoPlayback;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				0EF2387116CEC3D900E3065D /* cbt.dat in Resources */,
 				0EF2387316CEC3E100E3065D /* cbt.xml in Resources */,
 				0EEBCCBC16D8FFBC00EE9DA4 /* info.png in Resources */,
+				0EEBCCBE16D9011300EE9DA4 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
