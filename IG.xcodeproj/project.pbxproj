@@ -65,6 +65,8 @@
 		15CE876E164171EE005AE890 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15CE8763164171EE005AE890 /* Texture.mm */; };
 		15CF192F1525FB2D00AFE42F /* VPParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CF192E1525FB2D00AFE42F /* VPParentViewController.m */; };
 		15E927CB161F47D500D24BBE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E927CA161F47D400D24BBE /* Default-568h@2x.png */; };
+		ED0E40FD16D902F60001ADFC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E40FC16D902F60001ADFC /* DetailViewController.m */; };
+		EDFD037816D9070700DA39D6 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDFD037716D9070700DA39D6 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +148,9 @@
 		15CF192D1525FB2D00AFE42F /* VPParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPParentViewController.h; sourceTree = "<group>"; };
 		15CF192E1525FB2D00AFE42F /* VPParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPParentViewController.m; sourceTree = "<group>"; };
 		15E927CA161F47D400D24BBE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		ED0E40FB16D902F60001ADFC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		ED0E40FC16D902F60001ADFC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		EDFD037716D9070700DA39D6 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +246,9 @@
 				151E5D311525B3EF00BE66B7 /* VideoPlayerHelper.m */,
 				15CF192D1525FB2D00AFE42F /* VPParentViewController.h */,
 				15CF192E1525FB2D00AFE42F /* VPParentViewController.m */,
+				ED0E40FB16D902F60001ADFC /* DetailViewController.h */,
+				ED0E40FC16D902F60001ADFC /* DetailViewController.m */,
+				EDFD037716D9070700DA39D6 /* DetailViewController.xib */,
 				15B2A9A01520A27C00138A7D /* Supporting Files */,
 				0EEBCCBD16D9011300EE9DA4 /* index.html */,
 			);
@@ -400,6 +408,7 @@
 				0EF2387116CEC3D900E3065D /* cbt.dat in Resources */,
 				0EF2387316CEC3E100E3065D /* cbt.xml in Resources */,
 				0EEBCCBC16D8FFBC00EE9DA4 /* info.png in Resources */,
+				EDFD037816D9070700DA39D6 /* DetailViewController.xib in Resources */,
 				0EEBCCBE16D9011300EE9DA4 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +435,7 @@
 				15CE876A164171EE005AE890 /* QCARutils.mm in Sources */,
 				15CE876D164171EE005AE890 /* ShaderUtils.cpp in Sources */,
 				15CE876E164171EE005AE890 /* Texture.mm in Sources */,
+				ED0E40FD16D902F60001ADFC /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

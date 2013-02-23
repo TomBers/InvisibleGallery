@@ -24,6 +24,7 @@ then you may not retain or use any of the Sample Code in any manner.
     UIView* moviePlayerView;
 }
 
+- (void)presentDetailViewForTarget:(int)target;
 - (void)addMoviePlayerViewToMainView:(UIView*)view;
 - (void)removeMoviePlayerView;
 - (EAGLView*)getARView;

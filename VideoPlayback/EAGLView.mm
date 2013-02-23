@@ -208,7 +208,8 @@ namespace {
         
         if (touchedDetail) {
             NSLog(@"Show Detail view for ID: %d", touchedTarget);
-            
+            VideoPlaybackAppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+            [[appDelegate arParentViewController] presentDetailViewForTarget:touchedTarget];
             return;
         }
         

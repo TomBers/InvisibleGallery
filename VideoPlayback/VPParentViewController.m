@@ -20,6 +20,7 @@ then you may not retain or use any of the Sample Code in any manner.
 #import "ARViewController.h"
 #import "OverlayViewController.h"
 #import "EAGLView.h"
+#import "DetailViewController.h"
 
 
 @implementation VPParentViewController // subclass of ARParentViewController
@@ -48,6 +49,12 @@ then you may not retain or use any of the Sample Code in any manner.
     // Implemented only to prevent the super class methods from executing
 }
 
+- (void)presentDetailViewForTarget:(int)target {
+	NSLog(@"Details: %d", target);
+	DetailViewController *detailViewController = [[DetailViewController alloc] init];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+	[self presentModalViewController:navigationController animated:YES];
+}
 
 // Add a movie player view as a subview of the main (parent) view
 - (void)addMoviePlayerViewToMainView:(UIView*)view

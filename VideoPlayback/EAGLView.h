@@ -24,6 +24,8 @@ then you may not retain or use any of the Sample Code in any manner.
 
 #define NUM_VIDEO_TARGETS 2
 
+#import "VideoPlaybackAppDelegate.h"
+
 // This class wraps the CAEAGLLayer from CoreAnimation into a convenient UIView
 // subclass.  The view content is basically an EAGL surface you render your
 // OpenGL scene into.  Note that setting the view non-opaque will only work if
