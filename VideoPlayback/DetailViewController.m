@@ -29,6 +29,14 @@
 	[self.parentViewController.presentingViewController dismissModalViewControllerAnimated:YES];
 }
 
+- (void)setWebTarget:(NSString *)resource {
+	UIWebView *webView = (UIWebView *) self.view;
+	
+	NSURL *url = [[NSBundle mainBundle] URLForResource:resource withExtension:@"html"];
+	
+	[webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

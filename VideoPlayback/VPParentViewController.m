@@ -51,8 +51,10 @@ then you may not retain or use any of the Sample Code in any manner.
 
 - (void)presentDetailViewForTarget:(int)target {
 	NSLog(@"Details: %d", target);
-	DetailViewController *detailViewController = [[DetailViewController alloc] init];
-	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+	DetailViewController *detailViewController = [[[DetailViewController alloc] init] autorelease];
+	UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:detailViewController] autorelease];
+	
+	[detailViewController setWebTarget:@"index"];
 	[self presentModalViewController:navigationController animated:YES];
 }
 
