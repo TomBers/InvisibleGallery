@@ -80,6 +80,7 @@ namespace {
     } videoData[NUM_VIDEO_TARGETS];
     
     int touchedTarget = 0;
+    bool touchedDetail = false;
 }
 
 
@@ -137,7 +138,7 @@ namespace {
 -(void)setLocation:(NSString*)loc
 {
     location = loc;
-    NSLog(location);
+    NSLog(@"%@", location);
 //    [textureFilenames[] add
 //    [textureFilenames[] addObject:@"VuforiaSizzleReel_2.png"];
     
@@ -158,6 +159,7 @@ namespace {
     
     // Determine which target was touched (if no target was touch, touchedTarget
     // will be -1)
+    touchedDetail = false;
     touchedTarget = [self tapInsideTargetWithID];
     
     // Ignore touches when videoPlayerHelper is playing in fullscreen mode
@@ -203,6 +205,12 @@ namespace {
 {
     if (YES == tapPending) {
         tapPending = NO;
+        
+        if (touchedDetail) {
+            NSLog(@"Show Detail view for ID: %d", touchedTarget);
+            
+            return;
+        }
         
         // Get the state of the video player for the target the user touched
         MEDIA_STATE mediaState = [videoPlayerHelper[touchedTarget] getStatus];
@@ -257,11 +265,10 @@ namespace {
             (intersection.data[1] >= -videoData[i].targetPositiveDimensions.data[1]) && (intersection.data[1] <= videoData[i].targetPositiveDimensions.data[1])) {
             // The tap is only valid if it is inside an active target
             
-            if(intersection.data[0] > (videoData[i].targetPositiveDimensions.data[0] / 2) && intersection.data[1] < 0) {
-                NSLog(@"Bottom right quarter");
-                continue;
-            }
-            else if (YES == videoData[i].isActive) {
+            if (YES == videoData[i].isActive) {
+                if(intersection.data[0] > (videoData[i].targetPositiveDimensions.data[0] / 2) && intersection.data[1] < 0) {
+                    touchedDetail = true;
+                }
                 touchInTarget = i;
                 break;
             }
