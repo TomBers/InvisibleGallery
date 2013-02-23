@@ -141,6 +141,7 @@ bool setTextures = NO;
     [txtList addObject: [NSString stringWithUTF8String:(char *)"icon_error.png"]];
     [txtList addObject: [NSString stringWithUTF8String:(char *)"VuforiaSizzleReel_1.png"]];
     [txtList addObject: [NSString stringWithUTF8String:(char *)"VuforiaSizzleReel_2.png"]];
+	[txtList addObject: [NSString stringWithUTF8String:(char *)"info.png"]];
     
     if(! setTextures){
         [arView setTextureList:txtList];

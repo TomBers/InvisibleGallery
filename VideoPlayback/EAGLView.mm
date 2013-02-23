@@ -50,6 +50,7 @@ namespace {
         OBJECT_ERROR_ICON,
         OBJECT_KEYFRAME_1,
         OBJECT_KEYFRAME_2,
+		OBJECT_INFO_ICON,
     };
     
     const NSTimeInterval DOUBLE_TAP_INTERVAL = 0.3f;
@@ -59,6 +60,8 @@ namespace {
     // Playback icon scale factors
     const float SCALE_ICON = 2.0f;
     const float SCALE_ICON_TRANSLATION = 1.98f;
+	const float SCALE_INFO = 8.0f;
+	const float SCALE_INFO_TRANSLATION = 7.98f;
     
     // Video quad texture coordinates
     const GLfloat videoQuadTextureCoords[] = {
@@ -206,15 +209,15 @@ namespace {
     if (YES == tapPending) {
         tapPending = NO;
         
-        if (touchedDetail) {
+        // Get the state of the video player for the target the user touched
+        MEDIA_STATE mediaState = [videoPlayerHelper[touchedTarget] getStatus];
+		
+		if (touchedDetail && mediaState != PLAYING) {
             NSLog(@"Show Detail view for ID: %d", touchedTarget);
             VideoPlaybackAppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
             [[appDelegate arParentViewController] presentDetailViewForTarget:touchedTarget];
             return;
         }
-        
-        // Get the state of the video player for the target the user touched
-        MEDIA_STATE mediaState = [videoPlayerHelper[touchedTarget] getStatus];
         
 #ifdef EXAMPLE_CODE_REMOTE_FILE
         // With remote files, single tap starts playback using the native player
@@ -553,7 +556,9 @@ namespace {
             
             // Convert trackable pose to matrix for use with OpenGL
             QCAR::Matrix44F modelViewMatrixButton = QCAR::Tool::convertPose2GLMatrix(trackablePose);
+			QCAR::Matrix44F modelViewMatrixInfo = QCAR::Tool::convertPose2GLMatrix(trackablePose);
             QCAR::Matrix44F modelViewProjectionButton;
+			QCAR::Matrix44F modelViewProjectionInfo;
             
             ShaderUtils::translatePoseMatrix(0.0f, 0.0f, videoData[playerIndex].targetPositiveDimensions.data[1] / SCALE_ICON_TRANSLATION, &modelViewMatrixButton.data[0]);
             
@@ -565,6 +570,21 @@ namespace {
             ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0],
                                         &modelViewMatrixButton.data[0] ,
                                         &modelViewProjectionButton.data[0]);
+			
+			ShaderUtils::translatePoseMatrix(videoData[playerIndex].targetPositiveDimensions.data[0] * 0.8f,
+											 -videoData[playerIndex].targetPositiveDimensions.data[1] * 0.4f,
+											 videoData[playerIndex].targetPositiveDimensions.data[1] / SCALE_INFO_TRANSLATION, &modelViewMatrixInfo.data[0]);
+			
+			ShaderUtils::scalePoseMatrix(videoData[playerIndex].targetPositiveDimensions.data[1] / SCALE_INFO,
+                                         videoData[playerIndex].targetPositiveDimensions.data[1] / SCALE_INFO,
+                                         videoData[playerIndex].targetPositiveDimensions.data[1] / SCALE_INFO,
+										 &modelViewMatrixInfo.data[0]);
+			
+			ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0],
+										&modelViewMatrixInfo.data[0],
+										&modelViewProjectionInfo.data[0]);
+			
+			
             
             glDepthFunc(GL_LEQUAL);
             
@@ -586,7 +606,15 @@ namespace {
             glBindTexture(GL_TEXTURE_2D, iconTextureID);
             glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (GLfloat*)&modelViewProjectionButton.data[0] );
             glDrawElements(GL_TRIANGLES, NUM_QUAD_INDEX, GL_UNSIGNED_SHORT, quadIndices);
-            
+			
+			
+			Object3D* obj3D = [objects3D objectAtIndex:OBJECT_INFO_ICON];
+			iconTextureID = [[obj3D texture] textureID];
+			
+			glBindTexture(GL_TEXTURE_2D, iconTextureID);
+			glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (GLfloat*)&modelViewProjectionInfo.data[0] );
+			glDrawElements(GL_TRIANGLES, NUM_QUAD_INDEX, GL_UNSIGNED_SHORT, quadIndices);
+			
             glDisable(GL_BLEND);
             
             glDisableVertexAttribArray(vertexHandle);
