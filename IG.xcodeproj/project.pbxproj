@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EEBCCBC16D8FFBC00EE9DA4 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EEBCCBB16D8FFBB00EE9DA4 /* info.png */; };
 		0EF2386E16CDAD2600E3065D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF2386D16CDAD2600E3065D /* CoreLocation.framework */; };
 		0EF2387116CEC3D900E3065D /* cbt.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0EF2387016CEC3D900E3065D /* cbt.dat */; };
 		0EF2387316CEC3E100E3065D /* cbt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0EF2387216CEC3E100E3065D /* cbt.xml */; };
@@ -66,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EEBCCBB16D8FFBB00EE9DA4 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		0EF2386D16CDAD2600E3065D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0EF2387016CEC3D900E3065D /* cbt.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = cbt.dat; sourceTree = "<group>"; };
 		0EF2387216CEC3E100E3065D /* cbt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cbt.xml; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		15B2A9CD1520A51D00138A7D /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				0EEBCCBB16D8FFBB00EE9DA4 /* info.png */,
 				0EF2387216CEC3E100E3065D /* cbt.xml */,
 				0EF2387016CEC3D900E3065D /* cbt.dat */,
 				153DD83A1546AADD007A1B45 /* VuforiaSizzleReel_1.m4v */,
@@ -393,6 +396,7 @@
 				1526F6D316380ED8006408F8 /* Default-Landscape@2x~ipad.png in Resources */,
 				0EF2387116CEC3D900E3065D /* cbt.dat in Resources */,
 				0EF2387316CEC3E100E3065D /* cbt.xml in Resources */,
+				0EEBCCBC16D8FFBC00EE9DA4 /* info.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
