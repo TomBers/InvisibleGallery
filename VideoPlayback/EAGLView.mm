@@ -386,7 +386,7 @@ namespace {
         // VideoPlayerHelper to use for current target
         int playerIndex = 0;    // stones
         
-        if (strcmp(imageTarget.getName(), "cbt2") == 0)  //Setting the index for the images / video
+        if (strcmp(imageTarget.getName(), "nine") == 0)  //Setting the index for the images / video
         {
             playerIndex = 1;
         }

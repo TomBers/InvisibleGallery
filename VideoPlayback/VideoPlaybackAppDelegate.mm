@@ -91,7 +91,7 @@ namespace {
     // Provide a list of targets we're expecting - the first in the list is the default
 //    [qUtils addTargetName:@"Stones & Chips" atPath:@"StonesAndChips.xml"];
     
-    [qUtils addTargetName:@"cbt1 & cbt2" atPath:@"cbt.xml"];
+    [qUtils addTargetName:@"nine & eleven" atPath:@"cbt.xml"];
     
     // Add the EAGLView and the overlay view to the window
     arParentViewController = [[VPParentViewController alloc] initWithWindow:window];
