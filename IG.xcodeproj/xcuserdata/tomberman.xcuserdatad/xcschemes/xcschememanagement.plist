@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>VideoPlay.xcscheme</key>
+		<key>IG.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15B2A9941520A27C00138A7D</key>
+		<key>0E9F2AFB16E939B400D68FAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
