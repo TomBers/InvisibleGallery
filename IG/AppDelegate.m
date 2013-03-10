@@ -7,10 +7,48 @@
 //
 
 #import "AppDelegate.h"
-
+#import "IGGalleryManager.h"
 #import "ViewController.h"
 
 @implementation AppDelegate
+
+@synthesize locationManager;
+
+IGGalleryManager *GM;
+//This is where we get the Location Data on startup
+
+//Setup location manager when app loads
+
+//App delegate also needs to be a location manager delgate
+
+//And Instatiate Model
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    
+    NSString *currentLatitude = [[NSString alloc] initWithFormat:@"%g", locationManager.location.coordinate.latitude];
+    NSString *currentLongitude = [[NSString alloc] initWithFormat:@"%g", locationManager.location.coordinate.longitude];
+    
+    
+    [GM setGalleryLocation:currentLongitude atLat:currentLatitude];
+}
+
+
+
+- (void) setupLocationManager
+{
+// Create the manager object
+self.locationManager = [CLLocationManager new];
+    
+locationManager.delegate = self;
+// This is the most important property to set for the manager. It ultimately determines how the manager will
+// attempt to acquire location and thus, the amount of power that will be consumed.
+locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+// Once configured, the location manager must be "started".
+[locationManager startUpdatingLocation];
+
+self.locationManager.delegate = self;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,6 +57,12 @@
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    NSLog(@"Started");
+    
+    GM = [IGGalleryManager new];
+    [self setupLocationManager];
+    
     return YES;
 }
 

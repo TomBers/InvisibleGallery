@@ -18,6 +18,8 @@
 		0E9F2B1616E939B400D68FAF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E9F2B1516E939B400D68FAF /* Default-568h@2x.png */; };
 		0E9F2B1916E939B400D68FAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9F2B1816E939B400D68FAF /* ViewController.m */; };
 		0E9F2B1C16E939B400D68FAF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9F2B1A16E939B400D68FAF /* ViewController.xib */; };
+		0E9F2B2416E93C0500D68FAF /* IGGalleryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9F2B2316E93C0500D68FAF /* IGGalleryManager.m */; };
+		0E9F2B2616E93EB300D68FAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9F2B2516E93EB300D68FAF /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		0E9F2B1716E939B400D68FAF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0E9F2B1816E939B400D68FAF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0E9F2B1B16E939B400D68FAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		0E9F2B2216E93C0500D68FAF /* IGGalleryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGalleryManager.h; sourceTree = "<group>"; };
+		0E9F2B2316E93C0500D68FAF /* IGGalleryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGalleryManager.m; sourceTree = "<group>"; };
+		0E9F2B2516E93EB300D68FAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E9F2B2616E93EB300D68FAF /* CoreLocation.framework in Frameworks */,
 				0E9F2B0016E939B400D68FAF /* UIKit.framework in Frameworks */,
 				0E9F2B0216E939B400D68FAF /* Foundation.framework in Frameworks */,
 				0E9F2B0416E939B400D68FAF /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +79,7 @@
 		0E9F2AFE16E939B400D68FAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E9F2B2516E93EB300D68FAF /* CoreLocation.framework */,
 				0E9F2AFF16E939B400D68FAF /* UIKit.framework */,
 				0E9F2B0116E939B400D68FAF /* Foundation.framework */,
 				0E9F2B0316E939B400D68FAF /* CoreGraphics.framework */,
@@ -89,6 +96,8 @@
 				0E9F2B1816E939B400D68FAF /* ViewController.m */,
 				0E9F2B1A16E939B400D68FAF /* ViewController.xib */,
 				0E9F2B0616E939B400D68FAF /* Supporting Files */,
+				0E9F2B2216E93C0500D68FAF /* IGGalleryManager.h */,
+				0E9F2B2316E93C0500D68FAF /* IGGalleryManager.m */,
 			);
 			path = IG;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 				0E9F2B0C16E939B400D68FAF /* main.m in Sources */,
 				0E9F2B1016E939B400D68FAF /* AppDelegate.m in Sources */,
 				0E9F2B1916E939B400D68FAF /* ViewController.m in Sources */,
+				0E9F2B2416E93C0500D68FAF /* IGGalleryManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +308,7 @@
 				0E9F2B2116E939B400D68FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
