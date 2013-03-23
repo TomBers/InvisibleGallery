@@ -43,9 +43,13 @@ self.locationManager = [CLLocationManager new];
 locationManager.delegate = self;
 // This is the most important property to set for the manager. It ultimately determines how the manager will
 // attempt to acquire location and thus, the amount of power that will be consumed.
-locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+//locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+     [locationManager startMonitoringSignificantLocationChanges];
 // Once configured, the location manager must be "started".
-[locationManager startUpdatingLocation];
+    [locationManager startUpdatingLocation];
 
 self.locationManager.delegate = self;
 }

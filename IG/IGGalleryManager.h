@@ -12,10 +12,12 @@
 @interface IGGalleryManager : NSObject
 
 @property (nonatomic, retain) NSDictionary *artifacts;
+
+
 -(void) setGalleryLocation:(NSString *)currentLongitude atLat:(NSString *)currentLatitude;
 
-- (void) addTargetName:(NSString *)theName atPath:(NSString *)thePath;
+//- (void) addTargetName:(NSString *)theName atPath:(NSString *)thePath;
 
-- (void)deviceLocationUpdated:(CLLocation *)location;
+//- (void)deviceLocationUpdated:(CLLocation *)location;
 
 @end
