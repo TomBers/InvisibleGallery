@@ -31,6 +31,8 @@
 		0E9F2B1C16E939B400D68FAF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9F2B1A16E939B400D68FAF /* ViewController.xib */; };
 		0E9F2B2416E93C0500D68FAF /* IGGalleryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9F2B2316E93C0500D68FAF /* IGGalleryManager.m */; };
 		0E9F2B2616E93EB300D68FAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9F2B2516E93EB300D68FAF /* CoreLocation.framework */; };
+		EDF8F3CB1703943F0027A913 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF8F3CA1703943F0027A913 /* SystemConfiguration.framework */; };
+		EDF8F3CD170394450027A913 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF8F3CC170394450027A913 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		0E9F2B2216E93C0500D68FAF /* IGGalleryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGalleryManager.h; sourceTree = "<group>"; };
 		0E9F2B2316E93C0500D68FAF /* IGGalleryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGalleryManager.m; sourceTree = "<group>"; };
 		0E9F2B2516E93EB300D68FAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EDF8F3CA1703943F0027A913 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EDF8F3CC170394450027A913 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF8F3CD170394450027A913 /* MobileCoreServices.framework in Frameworks */,
+				EDF8F3CB1703943F0027A913 /* SystemConfiguration.framework in Frameworks */,
 				0E9F2B2616E93EB300D68FAF /* CoreLocation.framework in Frameworks */,
 				0E9F2B0016E939B400D68FAF /* UIKit.framework in Frameworks */,
 				0E9F2B0216E939B400D68FAF /* Foundation.framework in Frameworks */,
@@ -139,6 +145,8 @@
 		0E9F2AFE16E939B400D68FAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EDF8F3CA1703943F0027A913 /* SystemConfiguration.framework */,
+				EDF8F3CC170394450027A913 /* MobileCoreServices.framework */,
 				0E9F2B2516E93EB300D68FAF /* CoreLocation.framework */,
 				0E9F2AFF16E939B400D68FAF /* UIKit.framework */,
 				0E9F2B0116E939B400D68FAF /* Foundation.framework */,
