@@ -9,8 +9,4 @@
 #import "MetaioSDKViewController.h"
 #import "EAGLView.h"
 @interface ViewController : MetaioSDKViewController
-{
-IBOutlet UIImageView *imgView;
-IBOutlet UIButton *clearBttn;
-}
 @end
