@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Tom Berman. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "MetaioSDKViewController.h"
+#import "EAGLView.h"
+@interface ViewController : MetaioSDKViewController
 {
 IBOutlet UIImageView *imgView;
 IBOutlet UIButton *clearBttn;
