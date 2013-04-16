@@ -83,14 +83,14 @@
 		0E349466171D63320095E4E3 /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
 		0E349467171D63320095E4E3 /* MetaioSDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetaioSDKViewController.h; sourceTree = "<group>"; };
 		0E349468171D63320095E4E3 /* MetaioSDKViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MetaioSDKViewController.mm; sourceTree = "<group>"; };
-		0E9F2AFC16E939B400D68FAF /* IG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9F2AFC16E939B400D68FAF /* com.ig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.ig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9F2AFF16E939B400D68FAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E9F2B0116E939B400D68FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0E9F2B0316E939B400D68FAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0E9F2B0716E939B400D68FAF /* IG-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IG-Info.plist"; sourceTree = "<group>"; };
+		0E9F2B0716E939B400D68FAF /* ig-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ig-Info.plist"; sourceTree = "<group>"; };
 		0E9F2B0916E939B400D68FAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E9F2B0B16E939B400D68FAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0E9F2B0D16E939B400D68FAF /* IG-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IG-Prefix.pch"; sourceTree = "<group>"; };
+		0E9F2B0D16E939B400D68FAF /* ig.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ig.pch; sourceTree = "<group>"; };
 		0E9F2B0E16E939B400D68FAF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E9F2B0F16E939B400D68FAF /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		0E9F2B1116E939B400D68FAF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		0E9F2AFD16E939B400D68FAF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E9F2AFC16E939B400D68FAF /* IG.app */,
+				0E9F2AFC16E939B400D68FAF /* com.ig.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,10 +224,10 @@
 		0E9F2B0616E939B400D68FAF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0E9F2B0716E939B400D68FAF /* IG-Info.plist */,
+				0E9F2B0716E939B400D68FAF /* ig-Info.plist */,
 				0E9F2B0816E939B400D68FAF /* InfoPlist.strings */,
 				0E9F2B0B16E939B400D68FAF /* main.m */,
-				0E9F2B0D16E939B400D68FAF /* IG-Prefix.pch */,
+				0E9F2B0D16E939B400D68FAF /* ig.pch */,
 				0E9F2B1116E939B400D68FAF /* Default.png */,
 				0E9F2B1316E939B400D68FAF /* Default@2x.png */,
 				0E9F2B1516E939B400D68FAF /* Default-568h@2x.png */,
@@ -238,9 +238,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0E9F2AFB16E939B400D68FAF /* IG */ = {
+		0E9F2AFB16E939B400D68FAF /* ig */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E9F2B1F16E939B400D68FAF /* Build configuration list for PBXNativeTarget "IG" */;
+			buildConfigurationList = 0E9F2B1F16E939B400D68FAF /* Build configuration list for PBXNativeTarget "ig" */;
 			buildPhases = (
 				0E9F2AF816E939B400D68FAF /* Sources */,
 				0E9F2AF916E939B400D68FAF /* Frameworks */,
@@ -250,9 +250,9 @@
 			);
 			dependencies = (
 			);
-			name = IG;
+			name = ig;
 			productName = IG;
-			productReference = 0E9F2AFC16E939B400D68FAF /* IG.app */;
+			productReference = 0E9F2AFC16E939B400D68FAF /* com.ig.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -276,7 +276,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0E9F2AFB16E939B400D68FAF /* IG */,
+				0E9F2AFB16E939B400D68FAF /* ig */,
 			);
 		};
 /* End PBXProject section */
@@ -355,7 +355,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tom Berman (JC4C89XW87)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tom Berman (JC4C89XW87)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -370,6 +371,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "9E0716D8-9BEF-4678-BF3D-4F33D1BC4EC4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9E0716D8-9BEF-4678-BF3D-4F33D1BC4EC4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -386,7 +389,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tom Berman (JC4C89XW87)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tom Berman (JC4C89XW87)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -394,6 +398,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "9E0716D8-9BEF-4678-BF3D-4F33D1BC4EC4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9E0716D8-9BEF-4678-BF3D-4F33D1BC4EC4";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -412,13 +418,13 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IG/IG-Prefix.pch";
-				INFOPLIST_FILE = "IG/IG-Info.plist";
+				GCC_PREFIX_HEADER = "IG/ig.temp_caseinsensitive_rename-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/IG/ig-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../metaioSDK/SDK_iOS/metaioSDK.framework\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = com.ig;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -436,13 +442,13 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IG/IG-Prefix.pch";
-				INFOPLIST_FILE = "IG/IG-Info.plist";
+				GCC_PREFIX_HEADER = "IG/ig.temp_caseinsensitive_rename-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/IG/ig-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../metaioSDK/SDK_iOS/metaioSDK.framework\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = com.ig;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -459,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E9F2B1F16E939B400D68FAF /* Build configuration list for PBXNativeTarget "IG" */ = {
+		0E9F2B1F16E939B400D68FAF /* Build configuration list for PBXNativeTarget "ig" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E9F2B2016E939B400D68FAF /* Debug */,
