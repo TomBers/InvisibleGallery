@@ -14,7 +14,7 @@
 
 // Define your License here
 // for more information, please visit http://dev.metaio.com
-#define SDK_LICENSE "sY+4Q0zhQE+jobqN1JHtiVLH9QgqomVc/eDrbdlmOX8="
+#define SDK_LICENSE "ph9eRW735Zl4ojUcWTIC839Tuqh8PAR3bZfklIuVEnc="
 #if !defined (SDK_LICENSE)
 #error Please provide the license string for your application
 #endif
