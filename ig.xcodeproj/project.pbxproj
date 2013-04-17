@@ -49,6 +49,7 @@
 		0EC4E3D9171DA427001BF068 /* Tutorial2ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EC4E3C0171DA427001BF068 /* Tutorial2ViewController.mm */; };
 		0EC4E3DB171DA6E7001BF068 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4E3DA171DA6E7001BF068 /* cancel.png */; };
 		0EC4E3DD171F2131001BF068 /* Assets2 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4E3DC171F2131001BF068 /* Assets2 */; };
+		0EC4E3DF171F3F96001BF068 /* Markerless.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4E3DE171F3F96001BF068 /* Markerless.pdf */; };
 		EDF8F3CB1703943F0027A913 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF8F3CA1703943F0027A913 /* SystemConfiguration.framework */; };
 		EDF8F3CD170394450027A913 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF8F3CC170394450027A913 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,7 @@
 		0EC4E3C0171DA427001BF068 /* Tutorial2ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tutorial2ViewController.mm; sourceTree = "<group>"; };
 		0EC4E3DA171DA6E7001BF068 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		0EC4E3DC171F2131001BF068 /* Assets2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets2; sourceTree = "<group>"; };
+		0EC4E3DE171F3F96001BF068 /* Markerless.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Markerless.pdf; sourceTree = "<group>"; };
 		EDF8F3CA1703943F0027A913 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EDF8F3CC170394450027A913 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -252,6 +254,7 @@
 		0EC4E3A3171DA426001BF068 /* Tutorial2 */ = {
 			isa = PBXGroup;
 			children = (
+				0EC4E3DE171F3F96001BF068 /* Markerless.pdf */,
 				0EC4E3DC171F2131001BF068 /* Assets2 */,
 				0EC4E3DA171DA6E7001BF068 /* cancel.png */,
 				0EC4E3A4171DA426001BF068 /* arelConfig2.xml */,
@@ -326,6 +329,7 @@
 				0EC4E3D8171DA427001BF068 /* Tutorial2.xib in Resources */,
 				0EC4E3DB171DA6E7001BF068 /* cancel.png in Resources */,
 				0EC4E3DD171F2131001BF068 /* Assets2 in Resources */,
+				0EC4E3DF171F3F96001BF068 /* Markerless.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
