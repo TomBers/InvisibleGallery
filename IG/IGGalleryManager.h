@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+extern NSString *IGAssetPathNotification;
+
 @interface IGGalleryManager : NSObject
 
 @property (nonatomic, retain) NSDictionary *artifacts;

@@ -6,6 +6,7 @@
 
 #import "Tutorial2ViewController.h"
 #import "EAGLView.h"
+#import "IGGalleryManager.h"
 
 @interface Tutorial2ViewController ()
 - (void) setActiveModel: (int) modelIndex;
@@ -22,6 +23,9 @@
 {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserverForName:IGAssetPathNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
+        [self loadImage:notification.object];
+    }];
     
     // load our tracking configuration
     NSString* trackingDataFile = [[NSBundle mainBundle] pathForResource:@"TrackingData_MarkerlessFast" ofType:@"xml" inDirectory:@"Assets2"];	
@@ -56,20 +60,6 @@
         {
             NSLog(@"error, could not load %@", modelPath);
         }
-    }
-    
-    
-    // loadimage
-    
-    NSString* imagePath = [[NSBundle mainBundle] pathForResource:@"frame" ofType:@"png" inDirectory:@"Assets2"];
-    
-    if (imagePath)
-    {
-        m_imagePlane = m_metaioSDK->createGeometryFromImage([imagePath UTF8String]);
-        if (m_imagePlane) {
-            m_imagePlane->setScale(metaio::Vector3d(3.0,3.0,3.0));
-        }
-        else NSLog(@"Error: could not load image plane");
     }
 
     // load the movie plane
@@ -126,6 +116,20 @@
     [self setActiveModel:0];
 }
 
+- (void)loadImage:(NSString *)imagePath
+{
+    
+    if (imagePath)
+    {
+        m_imagePlane = m_metaioSDK->createGeometryFromImage([imagePath UTF8String]);
+        if (m_imagePlane) {
+            m_imagePlane->setScale(metaio::Vector3d(3.0,3.0,3.0));
+            m_imagePlane->setVisible(false);
+        }
+        else NSLog(@"Error: could not load image plane");
+    }
+}
+
 
 
 - (void)viewWillAppear:(BOOL)animated
@@ -162,6 +166,7 @@
     {
         case 0:
         {
+            if(m_imagePlane)
             m_imagePlane->setVisible(false);
             m_metaioMan->setVisible(true);
             m_truck->setVisible(false);
@@ -174,6 +179,7 @@
             
             
         case 1:
+            if(m_imagePlane)
             m_imagePlane->setVisible(true);
             m_metaioMan->setVisible(false);
             m_truck->setVisible(false);
@@ -184,6 +190,7 @@
             break;
             
         case 2:
+            if(m_imagePlane)
             m_imagePlane->setVisible(false);
             m_metaioMan->setVisible(false);
             m_truck->setVisible(true);
@@ -194,6 +201,7 @@
             
             
         case 3:
+            if(m_imagePlane)
             m_imagePlane->setVisible(false);
             m_metaioMan->setVisible(false);
             m_truck->setVisible(false);

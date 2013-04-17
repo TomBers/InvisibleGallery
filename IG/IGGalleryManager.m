@@ -10,6 +10,8 @@
 #import "AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
 
+NSString *IGAssetPathNotification = @"IGAssetPathNotification";
+
 @implementation IGGalleryManager
 
 //Update loaction device method
@@ -93,6 +95,7 @@ bool updateMedia = true;
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"Successfully downloaded file to %@", path);
+        [[NSNotificationCenter defaultCenter] postNotificationName:IGAssetPathNotification object:path];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];

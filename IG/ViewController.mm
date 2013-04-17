@@ -20,10 +20,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    Tutorial2ViewController* tutorialViewController = [[Tutorial2ViewController alloc] initWithNibName:@"Tutorial2" bundle:nil];
-    tutorialViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self presentModalViewController:tutorialViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,6 +31,14 @@
 - (void)imagesMediaToLoad
 {
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    
+    Tutorial2ViewController* tutorialViewController = [[Tutorial2ViewController alloc] initWithNibName:@"Tutorial2" bundle:nil];
+    tutorialViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentModalViewController:tutorialViewController animated:YES];
 }
 
 @end
