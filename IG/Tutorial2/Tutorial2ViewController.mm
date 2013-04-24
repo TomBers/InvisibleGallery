@@ -45,25 +45,10 @@
     
     
     // load content
-    NSString* modelPath = [[NSBundle mainBundle] pathForResource:@"metaioman" ofType:@"md2" inDirectory:@"Assets2"];
-    
-	if(modelPath)
-	{
-		// if this call was successful, theLoadedModel will contain a pointer to the 3D model
-        m_metaioMan =  m_metaioSDK->createGeometry([modelPath UTF8String]);
-        if( m_metaioMan )
-        {
-            // scale it a bit up
-            m_metaioMan->setScale(metaio::Vector3d(4.0,4.0,4.0));
-        }
-        else
-        {
-            NSLog(@"error, could not load %@", modelPath);
-        }
-    }
+ 
 
     // load the movie plane
-    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"demo_movie" ofType:@"3g2" inDirectory:@"Assets2"];
+    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"water2" ofType:@"m4v" inDirectory:@"Assets2"];
     
 	if(moviePath)
 	{
@@ -80,39 +65,8 @@
         }
     }
     
-    //load the truck model
-    NSString* truckPath = [[NSBundle mainBundle] pathForResource:@"truck" ofType:@"obj" inDirectory:@"Assets2/truck"];
     
-    if (truckPath)
-    {
-        m_truck = m_metaioSDK->createGeometry([truckPath UTF8String]);
-        if (m_truck)
-        {
-            m_truck->setScale(metaio::Vector3d(2.0, 2.0, 2.0));
-            m_truck->setRotation(metaio::Rotation(metaio::Vector3d(M_PI_2, 0, M_PI)));
-        }
-        else {
-            NSLog(@"Error: could not load truck model");
-        }
-    }
-    
-    //load env_map
-    NSString* mapPath = [[NSBundle mainBundle] pathForResource: @"env_map" ofType:@"" inDirectory:@"Assets2"];
-    
-    if (mapPath)
-    {
-        Boolean loaded = m_metaioSDK->loadEnvironmentMap([mapPath UTF8String]);
-        NSLog(@"The environment maps have been loaded: %d", (int)loaded);
-        
-    }
-    else
-    {
-        NSLog(@"Error: The filepath for the environment maps is invalid");
-    }
-    
-    
-    
-    // start with metaio man
+    // start with image
     [self setActiveModel:0];
 }
 
@@ -164,47 +118,21 @@
 {
     switch ( modelIndex )
     {
+     
+            
         case 0:
-        {
             if(m_imagePlane)
-            m_imagePlane->setVisible(false);
-            m_metaioMan->setVisible(true);
-            m_truck->setVisible(false);
+            m_imagePlane->setVisible(true);
             
             // stop the movie
             m_moviePlane->setVisible(false);
             m_moviePlane->stopMovieTexture();
-        }
             break;
             
             
         case 1:
             if(m_imagePlane)
-            m_imagePlane->setVisible(true);
-            m_metaioMan->setVisible(false);
-            m_truck->setVisible(false);
-            
-            // stop the movie
-            m_moviePlane->setVisible(false);
-            m_moviePlane->stopMovieTexture();
-            break;
-            
-        case 2:
-            if(m_imagePlane)
             m_imagePlane->setVisible(false);
-            m_metaioMan->setVisible(false);
-            m_truck->setVisible(true);
-            
-            m_moviePlane->setVisible(false);
-            m_moviePlane->stopMovieTexture();
-            break;
-            
-            
-        case 3:
-            if(m_imagePlane)
-            m_imagePlane->setVisible(false);
-            m_metaioMan->setVisible(false);
-            m_truck->setVisible(false);
             
             m_moviePlane->setVisible(true);
             m_moviePlane->startMovieTexture(true); // loop = true

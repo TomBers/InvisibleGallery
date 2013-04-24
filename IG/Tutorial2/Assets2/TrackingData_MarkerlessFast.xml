@@ -114,7 +114,8 @@
 							image. 
 							These parameters are not required and are intended 
 							for expert use only. -->
-					<ReferenceImage>metaioman_target.png</ReferenceImage>
+				<!--	<ReferenceImage>metaioman_target.png</ReferenceImage>  -->
+                    <ReferenceImage>tgt.png</ReferenceImage>
 					<!-- <ReferenceImage WidthMM="100" HeightMM="100">metaioman.png</ReferenceImage> -->
 
 					<!--	Another similarity threshold can be specified here. 
@@ -129,15 +130,15 @@
 
 			<!--	The commented lines below show how another COS can be 
 					added to the configuration. -->
-			<!--
+    
 			<SensorCOS>
 				<SensorCosID>Patch2</SensorCosID>
 				<Parameters>
-					<ReferenceImage>junaioman.png</ReferenceImage>
+					<ReferenceImage>tgt2.png</ReferenceImage>
 					<SimilarityThreshold>0.8</SimilarityThreshold>
 				</Parameters>
 			</SensorCOS>
-			-->
+
 
 		</Sensor>
 	</Sensors>
