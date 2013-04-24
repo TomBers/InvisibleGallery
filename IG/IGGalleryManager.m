@@ -79,34 +79,45 @@ bool updateMedia = true;
 
 -(void) pullMediafromURL:(NSArray *)mediaArray;
 {
-    NSLog(@"Pulling %d Images",mediaArray.count);
-    NSLog(@"Img Path %@",[mediaArray objectAtIndex:1]);
+//    Loop round and pull all images
+//    Create array of Strings (paths to images)
+//    notify the AG view controller of the array
+    
+    NSMutableArray *imgPaths = [NSMutableArray new];
+    
+    for (int i = 0 ; i < mediaArray.count ; i++) {
+        NSLog(@"Pulling %d Images",mediaArray.count);
+        NSLog(@"Img Path %@",[mediaArray objectAtIndex:i]);
+    
+        NSURL *tst = [NSURL URLWithString:[mediaArray objectAtIndex:i]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:tst];
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation new] initWithRequest:request];
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *imgStr = [NSString stringWithFormat:@"img%d",i];
+        NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:imgStr];
+        operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
+        
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"Successfully downloaded file to %@", path);
+            [imgPaths addObject:path];
+            
+            if(imgPaths.count == mediaArray.count){
+                NSLog(@"Sending notification");
+                [[NSNotificationCenter defaultCenter] postNotificationName:IGAssetPathNotification object:imgPaths];
+            }
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error: %@", error);
+        }];
+
+        [operation start];
+    }
+    
+//    NSLog(@"imgPath Size %d", imgPaths.count);
     
     
-    NSURL *tst = [NSURL URLWithString:[mediaArray objectAtIndex:1]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:tst];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation new] initWithRequest:request];
-  
     
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"filename"];
-    operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
-    
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Successfully downloaded file to %@", path);
-        [[NSNotificationCenter defaultCenter] postNotificationName:IGAssetPathNotification object:path];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-    
-    [operation start];
-    
-    
-//    [imageView setImageWithURL:[mediaArray objectAtIndex:0]];
-//    for (int i = 0 ; i < mediaArray.count ; i++) {
-//            NSLog(@"URL %d : %@",i, [mediaArray objectAtIndex:i]);
-//        }
 }
 
 

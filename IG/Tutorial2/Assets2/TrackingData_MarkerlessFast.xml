@@ -297,7 +297,7 @@
 		
          <COS>
          <Name>MarkerlessCOS2</Name>
-         <Fuser Type="BestQualityFuser">
+         <Fuser Type="SmoothingFuserr">
          <Parameters>
          <KeepPoseForNumberOfFrames>2</KeepPoseForNumberOfFrames>
          <GravityAssistance></GravityAssistance>

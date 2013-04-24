@@ -8,7 +8,8 @@
 
 @interface Tutorial2ViewController : MetaioSDKViewController
 {
-	metaio::IGeometry*       m_imagePlane;           // pointer to the image plane
+	metaio::IGeometry*       m_imagePlane;            // pointer to the image plane
+    metaio::IGeometry*       m_imagePlane2;
     metaio::IGeometry*       m_moviePlane;           // pointer to our movie plane
   
     

@@ -15,6 +15,8 @@
 
 @implementation Tutorial2ViewController
 
+NSMutableArray *pathsToImages;
+int targetNo = 0;
 
 #pragma mark - UIViewController lifecycle
 
@@ -24,7 +26,12 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:IGAssetPathNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
-        [self loadImage:notification.object];
+        pathsToImages = [NSMutableArray arrayWithArray:notification.object];
+        NSLog(@"Notified %lu Images",(unsigned long)pathsToImages.count);
+        [self loadImageGeometry:pathsToImages[0] withPlane:m_imagePlane];
+        [self loadImageGeometry:pathsToImages[0] withPlane:m_imagePlane2];
+        
+//        [self loadImage:notification.object];
     }];
     
     // load our tracking configuration
@@ -44,9 +51,42 @@
     
     
     
-    // load content
- 
+    // start with image
+    [self setActiveModel:0];
+}
 
+- (void)loadImageGeometry:(NSString *)imagePath withPlane:(metaio::IGeometry*) plane
+{
+    
+    if (imagePath)
+    {
+        NSLog(@"Setting new image : %@", imagePath);
+        
+       
+        plane = m_metaioSDK->createGeometryFromImage([imagePath UTF8String]);
+        if (plane) {
+            plane->setScale(metaio::Vector3d(3.0,3.0,3.0));
+        }
+        else NSLog(@"Error: could not load image plane");
+    }
+}
+
+- (void)loadTexture:(NSString *)imgLoc
+{
+    
+    if (imgLoc  && m_imagePlane)
+    {
+        
+        NSString *realPath = [NSString stringWithFormat:@"%@.png",imgLoc];
+        NSLog(@"Setting new image : %@", realPath);
+//        m_imagePlane->setTexture([realPath UTF8String]);
+        m_metaioSDK->setImage([realPath UTF8String]);
+            }
+}
+
+- (void)loadVideoPlane
+{
+    
     // load the movie plane
     NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"water2" ofType:@"m4v" inDirectory:@"Assets2"];
     
@@ -57,33 +97,14 @@
         {
             m_moviePlane->setScale(metaio::Vector3d(4.0,4.0,4.0));
             m_moviePlane->setRotation(metaio::Rotation(metaio::Vector3d(0, 0, -M_PI_2)));
-
+            
         }
         else
         {
-            NSLog(@"Error: could not load movie planes");            
+            NSLog(@"Error: could not load movie planes");
         }
     }
-    
-    
-    // start with image
-    [self setActiveModel:0];
 }
-
-- (void)loadImage:(NSString *)imagePath
-{
-    
-    if (imagePath)
-    {
-        m_imagePlane = m_metaioSDK->createGeometryFromImage([imagePath UTF8String]);
-        if (m_imagePlane) {
-            m_imagePlane->setScale(metaio::Vector3d(3.0,3.0,3.0));
-            m_imagePlane->setVisible(false);
-        }
-        else NSLog(@"Error: could not load image plane");
-    }
-}
-
 
 
 - (void)viewWillAppear:(BOOL)animated
@@ -116,34 +137,35 @@
 #pragma mark - App Logic
 - (void) setActiveModel: (int) modelIndex
 {
-    switch ( modelIndex )
-    {
-     
-            
-        case 0:
-            if(m_imagePlane)
-            m_imagePlane->setVisible(true);
-            
+//    switch ( modelIndex )
+//    {
+//     
+//            
+//        case 0:
+//            if(m_imagePlane)
+//            m_imagePlane->setVisible(true);
+    
             // stop the movie
-            m_moviePlane->setVisible(false);
-            m_moviePlane->stopMovieTexture();
-            break;
-            
-            
-        case 1:
-            if(m_imagePlane)
-            m_imagePlane->setVisible(false);
-            
-            m_moviePlane->setVisible(true);
-            m_moviePlane->startMovieTexture(true); // loop = true
-            break;
-    }
+//            m_moviePlane->setVisible(false);
+//            m_moviePlane->stopMovieTexture();
+
+//            break;
+//            
+//            
+//        case 1:
+//            if(m_imagePlane)
+//            m_imagePlane->setVisible(false);
+//            
+//            m_moviePlane->setVisible(true);
+//            m_moviePlane->startMovieTexture(true); // loop = true
+//            break;
+//    }
     
 }
 
 - (IBAction)onSegmentControlChanged:(UISegmentedControl*)sender 
 {
-    [self setActiveModel:sender.selectedSegmentIndex];
+//    [self setActiveModel:sender.selectedSegmentIndex];
 }
 
 - (void)drawFrame
@@ -160,9 +182,33 @@
     
     //if we have detected one, attach our metaioman to this coordinate system ID
     if(poses.size()){
-        NSLog(@"Marker name %d",poses[0].coordinateSystemID);
+        if(poses[0].coordinateSystemID == 1){
+            if(m_imagePlane && m_imagePlane2){
+                NSLog(@"Target 1 - imp1 vis, imp2 - invis");
+            m_imagePlane->setVisible(true);
+            m_imagePlane2->setVisible(false);
+            }
+        }
+
+        if(poses[0].coordinateSystemID == 2){
+            
+            if(m_imagePlane && m_imagePlane2){
+            NSLog(@"Target 2 - imp2 vis, imp1 - invis");
+            m_imagePlane->setVisible(false);
+            m_imagePlane2->setVisible(true);
+            }
+        }
+//        if(poses[0].coordinateSystemID != targetNo){
+//            targetNo = poses[0].coordinateSystemID;
+//            int imgNo = targetNo - 1;
+//            NSString *newPath = pathsToImages[imgNo];
+////            NSLog(@"New path : %@", newPath);
+////            [self loadImageGeometry:newPath];
+//           [self loadTexture:newPath];
+//        }
+//        NSLog(@"Marker name %d",poses[0].coordinateSystemID);
     }
-    
+
     
 }
 
