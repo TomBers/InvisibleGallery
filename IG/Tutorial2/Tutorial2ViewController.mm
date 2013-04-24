@@ -52,10 +52,10 @@
     
 	if(moviePath)
 	{
-        m_moviePlane =  m_metaioSDK->createGeometryFromMovie([moviePath UTF8String], true); // true for transparent movie
+        m_moviePlane =  m_metaioSDK->createGeometryFromMovie([moviePath UTF8String], false); // true for transparent movie
         if( m_moviePlane)
         {
-            m_moviePlane->setScale(metaio::Vector3d(2.0,2.0,2.0));
+            m_moviePlane->setScale(metaio::Vector3d(4.0,4.0,4.0));
             m_moviePlane->setRotation(metaio::Rotation(metaio::Vector3d(0, 0, -M_PI_2)));
 
         }
@@ -145,6 +145,27 @@
 {
     [self setActiveModel:sender.selectedSegmentIndex];
 }
+
+- (void)drawFrame
+{
+    [super drawFrame];
+    
+    if( !m_metaioSDK )
+        return;
+    
+    // get all the detected poses/targets
+    std::vector<metaio::TrackingValues> poses = m_metaioSDK->getTrackingValues();
+    
+    
+    
+    //if we have detected one, attach our metaioman to this coordinate system ID
+    if(poses.size()){
+        NSLog(@"Marker name %d",poses[0].coordinateSystemID);
+    }
+    
+    
+}
+
 
 - (IBAction)onButtonpressed:(id)sender 
 {
