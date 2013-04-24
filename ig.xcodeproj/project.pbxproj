@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E016B671726E1500049B758 /* ig_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E016B661726E1500049B758 /* ig_background.png */; };
 		0E01EC0816FDD79700895D5C /* OldCode.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0E01EC0716FDD79700895D5C /* OldCode.rtf */; };
 		0E01EC1D16FDE07400895D5C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E01EC0B16FDE07400895D5C /* AFHTTPClient.m */; };
 		0E01EC1E16FDE07400895D5C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E01EC0D16FDE07400895D5C /* AFHTTPRequestOperation.m */; };
@@ -29,6 +30,8 @@
 		0E349462171D60EE0095E4E3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E349461171D60EE0095E4E3 /* libz.dylib */; };
 		0E349469171D63320095E4E3 /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0E349466171D63320095E4E3 /* EAGLView.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0E34946A171D63320095E4E3 /* MetaioSDKViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0E349468171D63320095E4E3 /* MetaioSDKViewController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0E3877691726B55300AB6373 /* water2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 0E3877681726B55300AB6373 /* water2.m4v */; };
+		0E38776B1726DBB800AB6373 /* tgt2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E38776A1726DBB800AB6373 /* tgt2.jpg */; };
 		0E9F2B0016E939B400D68FAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9F2AFF16E939B400D68FAF /* UIKit.framework */; };
 		0E9F2B0216E939B400D68FAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9F2B0116E939B400D68FAF /* Foundation.framework */; };
 		0E9F2B0416E939B400D68FAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9F2B0316E939B400D68FAF /* CoreGraphics.framework */; };
@@ -42,19 +45,16 @@
 		0E9F2B1C16E939B400D68FAF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9F2B1A16E939B400D68FAF /* ViewController.xib */; };
 		0E9F2B2416E93C0500D68FAF /* IGGalleryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9F2B2316E93C0500D68FAF /* IGGalleryManager.m */; };
 		0E9F2B2616E93EB300D68FAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9F2B2516E93EB300D68FAF /* CoreLocation.framework */; };
-		0EC4E3C1171DA427001BF068 /* arelConfig2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4E3A4171DA426001BF068 /* arelConfig2.xml */; };
-		0EC4E3C2171DA427001BF068 /* arelTutorial2.html in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4E3A5171DA426001BF068 /* arelTutorial2.html */; };
 		0EC4E3D8171DA427001BF068 /* Tutorial2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4E3BE171DA427001BF068 /* Tutorial2.xib */; };
 		0EC4E3D9171DA427001BF068 /* Tutorial2ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EC4E3C0171DA427001BF068 /* Tutorial2ViewController.mm */; };
-		0EC4E3DB171DA6E7001BF068 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4E3DA171DA6E7001BF068 /* cancel.png */; };
 		0EC4E3DD171F2131001BF068 /* Assets2 in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4E3DC171F2131001BF068 /* Assets2 */; };
-		0EC4E3DF171F3F96001BF068 /* Markerless.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EC4E3DE171F3F96001BF068 /* Markerless.pdf */; };
 		ED2EB49D171F3E3D00093309 /* metaioSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2EB49C171F3E3D00093309 /* metaioSDK.framework */; };
 		EDF8F3CB1703943F0027A913 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF8F3CA1703943F0027A913 /* SystemConfiguration.framework */; };
 		EDF8F3CD170394450027A913 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF8F3CC170394450027A913 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E016B661726E1500049B758 /* ig_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ig_background.png; sourceTree = "<group>"; };
 		0E01EC0716FDD79700895D5C /* OldCode.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = OldCode.rtf; sourceTree = "<group>"; };
 		0E01EC0A16FDE07400895D5C /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		0E01EC0B16FDE07400895D5C /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -89,6 +89,8 @@
 		0E349466171D63320095E4E3 /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
 		0E349467171D63320095E4E3 /* MetaioSDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetaioSDKViewController.h; sourceTree = "<group>"; };
 		0E349468171D63320095E4E3 /* MetaioSDKViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MetaioSDKViewController.mm; sourceTree = "<group>"; };
+		0E3877681726B55300AB6373 /* water2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = water2.m4v; sourceTree = "<group>"; };
+		0E38776A1726DBB800AB6373 /* tgt2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tgt2.jpg; sourceTree = "<group>"; };
 		0E9F2AFC16E939B400D68FAF /* ig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9F2AFF16E939B400D68FAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E9F2B0116E939B400D68FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,14 +110,10 @@
 		0E9F2B2216E93C0500D68FAF /* IGGalleryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGalleryManager.h; sourceTree = "<group>"; };
 		0E9F2B2316E93C0500D68FAF /* IGGalleryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGalleryManager.m; sourceTree = "<group>"; };
 		0E9F2B2516E93EB300D68FAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		0EC4E3A4171DA426001BF068 /* arelConfig2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = arelConfig2.xml; sourceTree = "<group>"; };
-		0EC4E3A5171DA426001BF068 /* arelTutorial2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = arelTutorial2.html; sourceTree = "<group>"; };
 		0EC4E3BE171DA427001BF068 /* Tutorial2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tutorial2.xib; sourceTree = "<group>"; };
 		0EC4E3BF171DA427001BF068 /* Tutorial2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tutorial2ViewController.h; sourceTree = "<group>"; };
 		0EC4E3C0171DA427001BF068 /* Tutorial2ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tutorial2ViewController.mm; sourceTree = "<group>"; };
-		0EC4E3DA171DA6E7001BF068 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		0EC4E3DC171F2131001BF068 /* Assets2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets2; sourceTree = "<group>"; };
-		0EC4E3DE171F3F96001BF068 /* Markerless.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Markerless.pdf; sourceTree = "<group>"; };
 		ED2EB49C171F3E3D00093309 /* metaioSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = metaioSDK.framework; path = IG/metaioSDK.framework; sourceTree = "<group>"; };
 		EDF8F3CA1703943F0027A913 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EDF8F3CC170394450027A913 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -254,11 +252,10 @@
 		0EC4E3A3171DA426001BF068 /* Tutorial2 */ = {
 			isa = PBXGroup;
 			children = (
-				0EC4E3DE171F3F96001BF068 /* Markerless.pdf */,
+				0E016B661726E1500049B758 /* ig_background.png */,
+				0E38776A1726DBB800AB6373 /* tgt2.jpg */,
+				0E3877681726B55300AB6373 /* water2.m4v */,
 				0EC4E3DC171F2131001BF068 /* Assets2 */,
-				0EC4E3DA171DA6E7001BF068 /* cancel.png */,
-				0EC4E3A4171DA426001BF068 /* arelConfig2.xml */,
-				0EC4E3A5171DA426001BF068 /* arelTutorial2.html */,
 				0EC4E3BE171DA427001BF068 /* Tutorial2.xib */,
 				0EC4E3BF171DA427001BF068 /* Tutorial2ViewController.h */,
 				0EC4E3C0171DA427001BF068 /* Tutorial2ViewController.mm */,
@@ -295,7 +292,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Tom Berman";
 			};
-			buildConfigurationList = 0E9F2AF716E939B400D68FAF /* Build configuration list for PBXProject "IG" */;
+			buildConfigurationList = 0E9F2AF716E939B400D68FAF /* Build configuration list for PBXProject "ig" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -324,12 +321,11 @@
 				0E9F2B1C16E939B400D68FAF /* ViewController.xib in Resources */,
 				0E01EC0816FDD79700895D5C /* OldCode.rtf in Resources */,
 				0E01EC2716FDEB5600895D5C /* sampleImg.png in Resources */,
-				0EC4E3C1171DA427001BF068 /* arelConfig2.xml in Resources */,
-				0EC4E3C2171DA427001BF068 /* arelTutorial2.html in Resources */,
 				0EC4E3D8171DA427001BF068 /* Tutorial2.xib in Resources */,
-				0EC4E3DB171DA6E7001BF068 /* cancel.png in Resources */,
 				0EC4E3DD171F2131001BF068 /* Assets2 in Resources */,
-				0EC4E3DF171F3F96001BF068 /* Markerless.pdf in Resources */,
+				0E3877691726B55300AB6373 /* water2.m4v in Resources */,
+				0E38776B1726DBB800AB6373 /* tgt2.jpg in Resources */,
+				0E016B671726E1500049B758 /* ig_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +488,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E9F2AF716E939B400D68FAF /* Build configuration list for PBXProject "IG" */ = {
+		0E9F2AF716E939B400D68FAF /* Build configuration list for PBXProject "ig" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E9F2B1D16E939B400D68FAF /* Debug */,
